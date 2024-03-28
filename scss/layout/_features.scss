@@ -1,0 +1,199 @@
+.features {
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 60rem);
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            grid-template-rows: none;
+        }
+    }
+
+    &__image-box {
+        @include respond(tab-port) {
+            height: 31.2rem;
+        }
+
+        &--yellow {
+            background-image: url("../../images/desktop/image-transform.jpg"),
+                linear-gradient(to left, var(--yellow-100), var(--yellow-100));
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: contain;
+
+            @include respond(tab-land) {
+                background-position: center;
+                background-size: cover;
+            }
+
+            @include respond(tab-port) {
+                background-image: url("../../images/mobile/image-transform.jpg"),
+                    linear-gradient(to left, var(--yellow-100), var(--yellow-100));
+                background-position: center;
+                background-size: contain;
+                order: -1;
+            }
+        }
+
+        &--red {
+            background-image: url("../../images/desktop/image-stand-out.jpg"),
+                linear-gradient(to left, var(--red-100), var(--red-100));
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: contain;
+
+            @include respond(tab-land) {
+                background-position: bottom;
+                background-size: cover;
+            }
+
+            @include respond(tab-port) {
+                background-image: url("../../images/mobile/image-stand-out.jpg"),
+                    linear-gradient(to left, var(--red-100), var(--red-100));
+                background-position: center;
+                background-size: contain;
+            }
+
+            @include respond(phone) {
+                background-position: bottom;
+            }
+        }
+    }
+
+    &__text-box {
+        max-width: 44.5rem;
+        width: 100%;
+        align-self: center;
+
+        &--left {
+            margin-right: 11rem;
+            justify-self: end;
+        }
+
+        &--right {
+            margin-left: 11rem;
+        }
+
+        @include respond(tab-land) {
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 6.4rem 0;
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            max-width: 100%;
+            margin: 0;
+            padding: 6.4rem 2.4rem;
+        }
+    }
+
+    &__heading {
+        color: var(--blue-200);
+        margin-bottom: 3.2rem;
+
+        @include respond(phone) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__description {
+        color: var(--grey-200);
+        font-weight: var(--fw-medium);
+        line-height: 3rem;
+        letter-spacing: -0.13px;
+        margin-bottom: 4rem;
+
+        @include respond(phone) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__mixed {
+        .features__mixed-container {
+            background-repeat: no-repeat;
+            position: relative;
+            max-width: 72rem;
+            width: 100%;
+            height: 100%;
+
+            @include respond(tab-port) {
+                height: 60rem;
+            }
+        }
+
+        &--design {
+            background-color: var(--cyan-design);
+
+            .features__mixed-container {
+                background-image: url("../../images/desktop/image-graphic-design.jpg");
+                background-size: contain;
+                margin-left: auto;
+
+                @include respond(tab-land) {
+                    background-size: cover;
+                    background-position: center;
+                    margin: 0 auto;
+                }
+            }
+
+            .features__title {
+                color: var(--cyan-400);
+            }
+
+            .features__paragraph {
+                color: var(--cyan-400);
+            }
+        }
+
+        &--photography {
+            background-color: var(--cyan-photo);
+
+            .features__mixed-container {
+                background-image: url("../../images/desktop/image-photography.jpg");
+                background-size: contain;
+                margin-right: auto;
+
+                @include respond(tab-land) {
+                    background-size: cover;
+                    background-position: center;
+                    margin: 0 auto;
+                }
+            }
+
+            .features__title {
+                color: var(--blue-100);
+            }
+
+            .features__paragraph {
+                color: var(--blue-100);
+            }
+        }
+    }
+
+    &__mixed-content {
+        max-width: 33.9rem;
+        width: 100%;
+        text-align: center;
+
+        position: absolute;
+        top: 39.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__title {
+        margin-bottom: 2.8rem;
+    }
+
+    &__paragraph {
+        font-size: 1.6rem;
+        font-weight: var(--fw-medium);
+        line-height: 2.7rem;
+        letter-spacing: -0.11px;
+    }
+}

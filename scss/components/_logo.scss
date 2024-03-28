@@ -1,0 +1,9 @@
+.logo {
+    &__img {
+        min-height: 3.3rem;
+
+        @include respond(tab-port) {
+            min-height: 0;
+        }
+    }
+}

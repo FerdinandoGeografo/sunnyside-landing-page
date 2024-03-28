@@ -1,0 +1,65 @@
+.header {
+    background: var(--cyan-100);
+
+    &__content {
+        height: 80rem;
+
+        background-image: url("../../images/desktop/image-header.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 36rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            z-index: 1;
+            background-image: url("../../images/icon-arrow-down.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation: pulsateDown 1.5s ease-in-out infinite;
+            width: 3.6rem;
+            height: 11.4rem;
+
+            @include respond(tab-port) {
+                top: 29.2rem;
+            }
+        }
+
+        @include respond(tab-port) {
+            height: 64rem;
+        }
+
+        @include respond(phone) {
+            height: 53.8rem;
+            background-image: url("../../images/mobile/image-header.jpg");
+            background-size: cover;
+        }
+    }
+
+    &__navbar {
+        padding: 3.4rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            padding: 3.2rem 2.4rem;
+        }
+    }
+
+    &__hero-text {
+        text-align: center;
+        margin-top: 7.1rem;
+        padding: 0 4rem;
+
+        @include respond(phone) {
+            margin-top: 5.6rem;
+            padding: 0 0.8rem;
+        }
+    }
+}

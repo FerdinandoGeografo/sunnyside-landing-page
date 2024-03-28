@@ -1,0 +1,13 @@
+@keyframes pulsateDown {
+    0% {
+        transform: translate(-50%, -4rem);
+    }
+
+    50% {
+        transform: translate(-50%, 4rem);
+    }
+
+    100% {
+        transform: translate(-50%, -4rem);
+    }
+}

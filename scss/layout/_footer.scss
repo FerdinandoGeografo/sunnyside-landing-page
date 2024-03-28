@@ -1,0 +1,70 @@
+.footer {
+    background: var(--cyan-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7.2rem 0;
+
+    @include respond(phone) {
+        padding: 6.4rem 0 8rem 0;
+    }
+
+    &__logo {
+        margin-bottom: 4rem;
+
+        img {
+            min-height: 3.3rem;
+        }
+    }
+
+    &__links,
+    &__icons {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__links {
+        gap: 5.7rem;
+        margin-bottom: 8.8rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: none;
+            letter-spacing: -0.13px;
+            color: var(--cyan-300);
+            transition: var(--transition-base);
+        }
+
+        &:hover,
+        &:active {
+            color: var(--white-100);
+        }
+    }
+
+    &__icons {
+        gap: 2.8rem;
+
+        li {
+            max-height: 2rem;
+        }
+    }
+
+    &__icon {
+        display: inline-flex;
+
+        path {
+            transition: var(--transition-base);
+        }
+
+        &:hover path {
+            fill: var(--white-100);
+        }
+    }
+}

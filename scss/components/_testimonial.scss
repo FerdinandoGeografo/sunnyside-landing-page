@@ -1,0 +1,49 @@
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__img {
+        width: 7.2rem;
+        border-radius: 50%;
+    }
+
+    &__quote {
+        line-height: 3.2rem;
+        font-weight: var(--fw-medium);
+        color: var(--grey-300);
+        letter-spacing: -0.13px;
+        margin-top: 5.8rem;
+
+        @include respond(tab-port) {
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 6.9rem;
+
+        @include respond(tab-port) {
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__name {
+        font-family: var(--fraunces);
+        letter-spacing: -0.13px;
+        line-height: 2.3rem;
+        color: var(--blue-200);
+        font-weight: var(--fw-bold);
+    }
+
+    &__role {
+        font-size: 1.4rem;
+        color: var(--grey-100);
+        letter-spacing: -0.1px;
+        font-weight: var(--fw-medium);
+    }
+}

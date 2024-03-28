@@ -1,0 +1,37 @@
+.testimonials {
+    &__content {
+        padding: 16rem 16.5rem;
+
+        @include respond(tab-land) {
+            padding: 12rem 7rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 6.4rem 12rem 8.6rem 12rem;
+        }
+
+        @include respond(phone) {
+            padding: 6.4rem 2.4rem 8.6rem 2.4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8.1rem;
+        text-align: center;
+
+        @include respond(tab-port) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            row-gap: 6.4rem;
+        }
+    }
+}
